@@ -1,0 +1,1791 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=MedievalSharp&family=Poppins:wght@400;500&display=swap');
+
+/* VARIÁVEIS DE ATRIBUTO */
+:root {
+    /* PRIMARY PALETTE */
+    --pink-primary: #FF2253;
+    --pink-secondary: #FFE9EE;
+    --green-primary: #4ACA94;
+    --green-secondary: #E4F7EF;
+
+    /* PRODUCT PALETTE */
+    --product-1: #EEF6FF;
+    --product-2: #FFF7F4;
+    --product-3: #FFE4EA;
+    --product-4: #F3EEF5;
+
+    /* GRAY SCALE PALETTE */
+    --grey-4: #212529;
+    --grey-3: #868E96;
+    --grey-2: #E9ECEF;
+    --grey-1: #F8F9FA;
+
+    /* BACKGROUND-STYLE */
+    --background-color-body: #F5F5F5;
+    --fontfamily-poppins: "Poppins", sans-serif;
+    --fontfamily-inter: "Inter", sans-serif;
+
+    /* FONT-SIZES */
+    --fontsize-h1: 16px;
+    --fontsize-h2: 14px;
+    --fontsize-h3: 12px;
+    --fontsize-body: 14px;
+    --fontsize-caption: 12px;
+    --fontsize-detail: 10px;
+
+    /* FONT-COLOR */
+    --color-title: black;
+    --color-description: rgba(0, 0, 0, 0.5)
+}
+
+/* MOBILE FIRST */
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--fontfamily-poppins);
+    color: var(--grey-4);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################################################## HEADER ########################################################### */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 30px 15px 30px;
+}
+
+.header--container {
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+}
+
+.pesquisa {
+    position: relative;
+    background-color: var(--grey-1);
+    width: 100%;
+    margin: 16px auto 0;
+    border-radius: 30px;
+}
+
+.inputBusca {
+    background-color: var(--grey-1);
+    width: 94%;
+    height: 54px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+.inputBusca::placeholder {
+    color: var(--grey-3);
+}
+
+.inputBusca::focus {
+    border: 1.5px solid var(--grey-4);
+}
+
+/* BOX-LUPA */
+.box-lupa {
+    position: absolute;
+    left: 85%;
+    top: 10%;
+    background-color: var(--pink-secondary);
+    color: var(--pink-primary);
+    width: 44.12px;
+    height: 44.12px;
+    margin-right: 7px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.box-lupa:active {
+    background-color: var(--pink-primary);
+    color: var(--pink-secondary);
+}
+/* ################################################################# BOX-LOGIN ########################################################*/
+.box-login {
+    display: flex;
+    width: 100%;
+    margin: 30px 0 0 0;
+}
+.box-input {
+    width: 80%;
+}
+.box-input input {
+    background-color: var(--grey-1);
+    width: 80%;
+    padding: 10px 20px;
+    margin: 3px;
+    border: none;
+    border-radius: 15px;
+}
+.box-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: var(--pink-primary);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.login--icone {
+    background-color: var(--pink-primary);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+.login--icone:active {
+    background-color: var(--pink-secondary);
+    color: var(--pink-primary);
+}
+
+
+
+/*  ############################################## FORMULARIO ################################################ */
+/* ############################################# FORMULARIO ########################################## */
+.ul_select::-webkit-scrollbar {
+    width: 10px;
+}
+
+.ul_select::-webkit-scrollbar-track {
+    background: var(--grey-1);
+}
+
+.ul_select::-webkit-scrollbar-thumb {
+    background: var(--pink-primary);
+    border-radius: 15px;
+}
+.ul_select>li {
+    font-size: var(--fontsize-h1);
+}
+.form {
+    width: 100px;
+}
+.formulario {
+    width: 100%;
+}
+.formulario>input {
+    outline-color: var(--grey-4);
+    margin: 10px 0;
+} 
+
+.app__popUp input {
+    display: block;
+    width: 90%;
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form{
+    
+    border-top: 4px var(--pink-primary) solid;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* INTERFACE DE CADASTRO E ATUALIZAÇÃO DE PRODUTOS */
+/* ################################################## POP UP CADASTRO ########################################### */
+
+.app__popUp {
+    display: flex;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    background-color: white;
+    font-family: var(--fontfamily-inter);
+    color: var(--grey-4);
+    width: 100%;
+    height: 460px;
+    max-width: 640px;
+    border: 2px solid var(--grey-2);
+    border-radius: 5px;
+    padding: 0px;
+}
+
+form{    
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+
+.app__popUp>input {
+    border: none;
+
+}
+
+.app__popUp.app__popUp__cliente.show {
+    display: block;
+}
+
+.app__popUp #spnFechar {
+    background-color: var(--product-1);
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-weight:bolders;
+    color: var(--pink-primary);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.app__popUp label {
+    font-weight: bold;
+    margin: 5px 0;
+    display: block;
+}
+
+.app__popUp #prod{
+    display: flex;
+}
+
+.app__popUp .zerarForm{
+    margin-left:15px ;
+    align-self: flex-end;
+}
+
+.app__popUp #prod{
+    width: 100%;
+}
+
+/* TRATAMENTO MOBILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.app__popUp ul {  
+    width: 230px;
+    height: 100px;
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1
+   
+}
+.app__popUp ul li:nth-child(2n+1) {
+    background-color: var(--grey-2);
+
+}
+
+
+.app__popUp li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
+    height: 25px;
+}
+
+.div__form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:70px ;
+
+}
+
+.app__popUp li button {
+    margin: 0px;
+    width: 30px;
+    height: 20px;
+}
+
+.app__popUp textarea {
+    display: block;
+    width: 100%;
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.app__popUp h2 {
+    font-size: var(--fontsize-h1);
+    text-align: center;
+    height: 40px;
+}
+
+.app__popUp .app__listaClientes {
+    height: 110px;
+    overflow-y: scroll;
+}
+
+.app__popUp .app__cliente {
+    display: flex;
+    align-items: center;
+}
+
+.app__popUp .app__cliente input[type="checkbox"] {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.app__popUp button {
+    text-align: center;
+    background-color: var(--pink-primary);
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 0px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.app__popUp .zerarForm{
+    width: 55px;
+}
+
+/* .app__popUp #preco{
+    width: 60px;
+} */
+
+/* .app__popUp #categoria{
+    width: 60px;
+} */
+
+.app__popUp button:active {
+    background-color: var(--pink-secondary);
+    color: var(--pink-primary);
+}
+
+form label{
+    margin-top: 15px;
+    height: 50px;
+    width: 100px;
+}
+
+form input{
+    position: relative;
+    height: 10px;
+    align-self: flex-end;
+}
+
+form #nomeForm{
+    /* position: absolute; */
+    margin-left: -105px;
+    margin-top: 0px;
+    width: 90%;
+    margin-right: 10px;
+    /* margin-right: 100px; */
+}
+
+form #preco{
+    width: 20%;
+    margin-left: -105px;
+    margin-right: 15px;
+}
+
+form #categoria{
+    width: 61%;
+    margin-right: 10px;
+    margin-left: -100px;
+}
+
+form #imagem{
+    width: 90%;
+    margin-left: -105px;
+}
+
+form #descricao{
+    width: 90%;
+    margin-left: -105px;
+    margin-right:10px ;
+}
+
+form .cadastrarProd{
+    margin: auto;
+    margin-top: 10px;
+    
+
+}
+
+.app__popUp h2{
+    font-size: 25px;
+    font-weight: bold;
+    color:var(--pink-primary);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################################### VITRINE ######################################################## */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.ul__filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.li__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    color: var(--grey-4);
+    font-size: var(--fontsize-h2);
+    height: 40px;
+    font-weight: 500;
+    line-height: 16.94px;
+    padding: 0 15px;
+    margin: 3px;
+    border: 1.5px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.li__item:active {
+    border: 1.5px solid var(--grey-4);
+}
+
+.li__item:hover {
+    background-color: var(--grey-1);
+    border: 1.5px solid var(--grey-4);
+}
+
+.li__item--all {
+    background-color: var(--product-1);
+    width: 72px;
+}
+
+.li__item--bakery {
+    background-color: var(--product-2);
+    width: 148px;
+}
+
+.li__item--fruits {
+    background-color: var(--product-3);
+    width: 107px;
+}
+
+.li__item--drinks {
+    background-color: var(--product-4);
+    width: 118px;
+}
+
+.vitrinePrincipal {
+    display: flex;
+    width: 100%;
+}
+
+.section {
+    width: 100vw;
+    padding: 0 30px;
+}
+
+.scroll {
+    overflow-x: auto;
+}
+
+/* ####################################################### MAIN - BARRA DE ROLAGEM #################################################### */
+.scroll::-webkit-scrollbar {
+    width: 100px;
+    height: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    /* border-radius: 25px; */
+}
+
+.scroll::-webkit-scrollbar-button {
+    width: 20px;
+    height: 0;
+    display: none;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--pink-primary);
+    border-radius: 25px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-primary);
+    border-radius: 25px;
+}
+
+.scroll::-webkit-scrollbar-thumb:active {
+    background: var(--pink-primary);
+    border-radius: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--fontfamily-poppins);
+    width: 300px;
+    height: 369px;
+    margin: 10px;
+}
+
+.figure {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: 3px solid var(--pink-secondary);
+    border-radius: 8px;
+}
+
+.figure:hover {
+    border: 3px solid var(--pink-primary);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.figure__image {
+    width: 300px;
+    height: 200px;
+}
+
+.figure figcaption {
+    display: none;
+}
+
+.card__categoria {
+    position: absolute;
+    top: 178px;
+    left: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card__titulo {
+    color: var(--color-title);
+    font-size: var(--fontsize-h1);
+    font-weight: bolder;
+    line-height: 27px;
+    margin: 3px;
+}
+
+.card__descricao {
+    color: var(--color-description);
+    font-size: var(--fontsize-h3);
+    font-weight: normal;
+    line-height: 16px;
+    margin: 3px;
+
+}
+
+.card__rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card__preco {
+    color: var(--grey-4);
+    font-size: var(--fontsize-h3);
+    font-weight: bolder;
+    line-height: 13px;
+}
+
+.addToCar {
+    background-color: var(--green-secondary);
+    color: var(--green-primary);
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+}
+
+.addToCar:active {
+    background-color: var(--green-primary);
+    color: var(--green-secondary);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ################################################### CARRINHO DE COMPRAS = HEADER ################################################## */
+aside {
+    /* margin-top: 30px; */
+    margin-bottom: 50px;
+}
+
+.header-carrinho {
+    display: flex;
+    align-items: center;
+    background-color: var(--pink-primary);
+    width: 342px;
+    height: 59.85px;
+    border-radius: 14.9625px 14.9625px 0px 0px;
+    margin-top: 73px;
+    margin-bottom: 6.41px;
+}
+
+.header-carrinho h2 {
+    color: white;
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17.1px;
+    line-height: 28px;
+}
+
+.icon-carrinho {
+    margin-left: 24.58px;
+    margin-right: 20.31px;
+}
+
+/* ####################################################### CARRINHO DE COMPRAS - VAZIO ############################################ */
+.main-carrinho {
+    background: var(--grey-1);
+    width: 340.93px;
+    height: 432.84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sacola {
+    margin-top: 130px;
+}
+
+.main-carrinho-p {
+    text-align: center;
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #868E96;
+    width: 150px;
+}
+
+.ops {
+    font-family: var(--fontfamily-poppins);
+    font-size: var(--fontsize-body);
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 22.42px;
+    margin-bottom: 15px;
+    color: #868E96;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-carrinho ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sacola {
+    margin-top: 130px;
+}
+
+/* ########################################################## CARRINHO DE COMPRAS - PRODUTOS ######################################## */
+.div__car li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    height: 70px;
+    width: 300px;
+    margin: 21px 0px 21px 0px;
+    font-family: var(--fontfamily-poppins);
+}
+
+.div__car li img {
+    font-family: var(--fontfamily-poppins);
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.div__car li p {
+    margin: 3px 0px 0px 75px;
+    width: 67px;
+    height: 16px;
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    margin-top: 0px;
+    color: #868E96;
+}
+
+.div__car li h3 {
+    width: 176px;
+    height: 20px;
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    margin: -73px 0px 0px 75px;
+}
+
+.div__car li span {
+    margin: 8px 0px 0px 75px;
+    width: 50px;
+    height: 16px;
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    width: 150px;
+}
+
+.ops {
+    font-family: var(--fontfamily-poppins);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 22.42px;
+    margin-bottom: 15px;
+    color: #868E96;
+}
+
+.div__car li button {
+    background-color: var(--grey-1);
+    color: var(--grey-3);
+    width: 25px;
+    height: 25px;
+    margin-left: 275px;
+    margin-top: -60px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.box-input input {
+    background-color: var(--grey-1);
+    width: 90%;
+    padding: 3px 15px;
+    margin: 3px;
+    border: none;
+    border-radius: 15px;
+}
+
+.div-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 340px;
+}
+
+.div-total p {
+    width: 100px;
+    height: 14px;
+    font-family: var(--fontfamily-poppins);
+    font-size: var(--fontsize-caption);
+    font-style: normal;
+    font-weight: bold;
+    line-height: 13px;
+}
+
+.div-total span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--fontfamily-poppins);
+    font-size: var(--fontsize-caption);
+    font-style: normal;
+    font-weight: bold;
+    line-height: 13px;
+    width: 150px;
+    height: 14px;
+    margin: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #################################################################################
+    LAYOUTS PARA QUEBRAS DE TELA (BREAKPOINTS)
+    CONFIGURAÇÃO PARA ESTILIZAÇÃO DE MEDIA QUERIES
+    VIEWPRTS: 768px, 1000px, 1440px
+   #################################################################################
+ */
+
+/* MEDIA QUERY => 768px */
+@media (min-width: 768px) {
+
+    /* ################################################################# HEADER ################################################# */
+    .inputBusca {
+        /* background-color: yellow; */
+        width: 311px;
+        width: 90%;
+        height: 49px;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .header--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 620px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: flex;
+        /* background-color: green; */
+        width: 50%;
+        width: 33%;
+    }
+
+    .pesquisa {
+        width: 311px;
+        width: 33%;
+        height: 49px;
+        margin: 0;
+    }
+
+    .box-lupa {
+        left: 92%;
+        left: 80%;
+        top: 15%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .box-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 33%;
+        height: 50px;
+        margin: 0;
+        /* background-color: black; */
+    }
+
+    .box-input {
+        width: 200%;
+    }
+
+    .box-input input {
+        padding: 3px 15px;
+        border: none;
+        border-radius: 15px;
+    }
+
+    .box-button {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 40%;
+        margin: 3px;
+    }
+    .login--icone {
+        height: 200%;
+    }
+
+    /* ######################################################## MAIN ##################################################################*/
+    .main {
+        align-items: center;
+        height: fit-content;
+    }
+
+    .section {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .scroll {
+        overflow-x: unset;
+    }
+
+    .vitrinePrincipal {
+        min-width: 620px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ul__filter {
+        width: 620px;
+        margin: 0 auto;
+    }
+
+    .addToCar:hover {
+        background-color: var(--green-primary);
+        color: var(--green-secondary);
+        color: white;
+        cursor: pointer;
+    }
+
+    
+    /* ##############################################CARRINHO DE COMPRAS - HEADER #########################################################3*/
+    .aside {
+        margin-bottom: 50px;
+
+    }
+
+    .header-carrinho{
+        background-color: var(--pink-primary);
+        width: 320px;
+        height: 56px;
+        border-radius: 14px 14px 0px 0px;
+    }
+    /* CARRINHO DE COMPRAS - MAIN */
+    .main-carrinho{
+        background: var(--greysup);
+        width: 319px;
+        height: 405px;
+    }
+
+    .div__car li button{
+        background-color:#F8F9FA;
+        color: #868E96;
+        width: 25px;
+        height: 25px;
+        margin-left: 275px;
+        margin-top: -60px;
+        border-radius: 4px;
+        border:none;
+    }
+    
+    .div-total{
+        width: 340px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .div-total p{
+        width: 100px;
+        height: 14px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 13px;
+    
+    }
+    .div-total span{
+        margin:12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 13px;
+        width: 150px;
+        height: 14px;
+
+    }
+    /* #################################################### FORMULARIO ############################################################ */
+    .app__popUp input {
+        display: block;
+        width: 96%;
+        border: solid 1px #ccc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    form{
+
+        border-top: 4px var(--pink-primary) solid;
+        margin-top: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .app__popUp ul {  
+        width: 60%;
+       
+    }
+    
+
+form label{
+    margin-top: 15px;
+    height: 50px;
+}
+
+form input{
+    position: relative;
+    height: 10px;
+    align-self: flex-end;
+}
+
+form #nomeForm{
+    margin-left: -105px;
+    width: 80%;
+    margin-right: 5px;
+}
+
+form #preco{
+    margin-left: -100px;
+    width: 10%;
+}
+
+form #categoria{
+    width: 20%;
+    margin-right: 10px;
+    margin-left: -105px;
+}
+
+form #imagem{
+    width: 70%;
+    margin-left: -100px;
+}
+
+form #descricao{
+    width: 60%;
+    margin-left: -105px;
+    margin-right:10px ;
+}
+
+form .cadastrarProd{
+    margin-bottom: 0px;
+    align-self: flex-end;
+}
+
+.app__popUp h2{
+    font-size: 25px;
+    font-weight: bold;
+    color:var(--pink-primary);
+
+}
+
+
+    
+}
+
+
+
+
+/* ######################################################## MEDIA QUERY => 1000px ################################################# */
+@media (min-width: 1000px) {
+    .container {
+        background-color: white;
+    }
+
+    /* ######################################################### HEADER ########################################################### */
+    .header {
+        width: 100%;
+        margin-top: 0;
+        background-color: white;
+        padding: 15px 40px;
+    }
+
+    .header--container {
+        justify-content: space-between;
+        width: 1000px;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .inputBusca {
+        width: 94%;
+        height: 49px;
+    }
+
+    .box-lupa {
+        top: 12%;
+        left: 89%;
+    }
+
+    /* ############################################################# MAIN ########################################################### */
+    .main {
+        padding: 15px 0;
+    }
+
+    .ul__filter {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* CARRINHO ############################################### */
+
+
+    .header-carrinho{
+        /* margin-top: 73px; */
+        background-color: #FF2253;
+        width: 320px;
+        height: 56px;
+        border-radius: 14px 14px 0px 0px;
+        
+     }
+     
+     .main-carrinho{
+        background: #F8F9FA;
+        width: 319px;
+        height: 405px;
+    
+     }
+ 
+
+    .vitrinePrincipal {
+        width: 960px;
+        max-width: 1000px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+/* #################################################### MEDIA QUERY => 1440px #################################################### */
+@media (min-width: 1440px) {
+
+    /* ######################################################### HEADER ##################################################### */
+    .header {
+        width: 100%;
+        padding: 30px 60px 15px 100px;
+        padding: 30px 30px 15px 70px;
+        width: 90%;
+    }
+ 
+    /* MAIN */
+ 
+    .addToCar:hover {
+        background-color: var(--green-primary);
+        color: var(--green-secondary);
+        color: white;
+        cursor: pointer;
+    }
+
+    .header {
+
+        box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
+    }
+.header--container {
+    width: 100%;
+    }
+
+    /* ################################################################ MAIN ##################################################### */
+    .main {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        background-color: var(--background-color-body);
+        height: 100vh;
+    }
+
+    .section {
+        width: 1000px;
+        margin: 0;
+    }
+
+    .ul__filter {
+        width: 90%;
+        margin: auto;
+    }
+
+    .vitrinePrincipal {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 1000px;
+    }
+
+}
+
+.container.active::before {
+    content: "";
+    display: block;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 69%);
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    top: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INTERFACE DE CADASTRO E ATUALIZAÇÃO DE PRODUTOS */
+/* ################################################## POP UP CADASTRO ########################################### */
+
+/* .app__popUp {
+    display: flex;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    background-color: white;
+    font-family: var(--fontfamily-inter);
+    color: var(--grey-4);
+    width: 80%;
+    height: 425px;
+    max-width: 640px;
+    border: 2px solid var(--grey-2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.app__popUp>input {
+    border: none;
+
+}
+
+.app__popUp.app__popUp__cliente.show {
+    display: block;
+}
+
+.app__popUp span {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-weight:bolders;
+    color: var(--pink-primary);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.app__popUp label {
+    font-weight: bold;
+    margin: 5px 0;
+    display: block;
+}
+
+.app__popUp #prod{
+    display: flex;
+}
+
+.app__popUp .zerarForm{
+    margin-left:15px ;
+    align-self: flex-end;
+}
+
+
+
+
+
+.app__popUp ul {  
+    width: 50%;
+    height: 100px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+   
+}
+.app__popUp ul li:nth-child(2n+1) {
+    background-color: var(--grey-2);
+
+}
+
+
+.app__popUp li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
+    height: 25px;
+}
+
+.div__form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:70px ;
+
+}
+
+.app__popUp li button {
+    margin: 0px;
+    width: 30px;
+    height: 20px;
+}
+
+.app__popUp textarea {
+    display: block;
+    width: 100%;
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.app__popUp h2 {
+    font-size: var(--fontsize-h1);
+    text-align: center;
+    height: 40px;
+}
+
+.app__popUp .app__listaClientes {
+    height: 110px;
+    overflow-y: scroll;
+}
+
+.app__popUp .app__cliente {
+    display: flex;
+    align-items: center;
+}
+
+.app__popUp .app__cliente input[type="checkbox"] {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.app__popUp button {
+    background-color: var(--pink-primary);
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.app__popUp #preco{
+    width: 60px;
+}
+
+
+
+.app__popUp button:active {
+    background-color: var(--pink-secondary);
+    color: var(--pink-primary);
+}
+
+form{
+
+    border-top: 4px var(--pink-primary) solid;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+form label{
+    margin-top: 15px;
+    height: 50px;
+}
+
+form input{
+    position: relative;
+    height: 10px;
+    align-self: flex-end;
+}
+
+form #nomeForm{
+    margin-left: -45px;
+    width: 80%;
+    margin-right: 10px;
+}
+
+form #preco{
+    margin-left: -45px;
+}
+
+form #categoria{
+    width: 100px;
+    margin-right: 10px;
+    margin-left: -75px;
+}
+
+form #imagem{
+    width: 70%;
+    margin-left: -60px;
+}
+
+form #descricao{
+    width: 60%;
+    margin-left: -75px;
+    margin-right:10px ;
+}
+
+.cadastrarProd{
+    align-self: flex-end;
+}
+
+.app__popUp h2{
+    font-size: 25px;
+    font-weight: bold;
+    color:var(--pink-primary);
+
+} */
